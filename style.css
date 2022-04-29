@@ -1,0 +1,266 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none
+}
+body,html{
+  max-width: 100%;
+  height: 100%;
+}
+li{
+  list-style: none;
+}
+.text-content{
+  
+}
+
+/* section共通設定 */
+section{
+ margin-top: 100px;
+ padding: 0 50px;
+
+}
+
+section h2{
+  font-size: 40px;
+  margin-bottom:50px ;
+  text-align: center;
+}
+
+
+
+/* ヘッダー */
+
+header{
+  display:flex ;
+  justify-content: space-between;
+  padding:20px 70px;
+  height: 80px;
+position: fixed;
+  width: 100%;
+z-index: 10;
+background-color: rgb(255, 255, 255);
+
+}
+
+/* ハンバーガー背景 */
+.full-back.open{
+ background-color: rgba(0, 0, 0, 0.614);
+ width: 100%;
+ height: 100%;
+opacity: 0.8;
+cursor: pointer;
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+position: fixed;
+z-index: 20;
+}
+
+
+
+
+
+
+/* ハンバーガー */
+
+.hamburger-line{
+  background-color: black;
+  width: 50px;
+  height: 2px;
+  display: block;
+ 
+ 
+
+}
+
+
+.hamburger{
+  position: relative;
+ display: block;
+  z-index: 100;
+
+
+}
+/* .hamburger.open{
+position: fixed;
+z-index: 100;
+} */
+.line1{
+transition: all .5s;
+}
+.line2{
+  margin-top: 10px;
+  transition: all .5s;
+}
+.line3{
+margin-top: 10px;
+transition: all .5s;
+}
+
+.line1.open{
+  transform: rotate(-50deg);
+
+position: absolute;
+top: 10px;
+right: 0;
+left: 0;
+}
+.line2.open{
+  opacity: 0;
+}
+
+.line3.open{
+  transform: rotate(45deg);
+margin-top: 0px;
+}
+/* ナビゲーション */
+nav{
+  left: -100%;
+  position: absolute;
+  background-color: black;
+  height: 100vh;
+ top: 0;
+  padding: 80px 30px;
+  width: 300px;
+ transition: all 0.5s;
+}
+
+nav.open{
+  left: 0%;
+  z-index: 20;
+  position: fixed;
+}
+.list{
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+  padding: 20px 0px;
+}
+.navi{
+  margin-bottom: 200px;
+}
+nav a{
+  color:white ;
+  font-size: 15px;
+  text-decoration: none;
+}
+.sns-list{
+  margin-bottom: 20px;
+}
+
+/* main */
+
+main{
+  padding-top:100px;
+}
+
+/* pickup */
+
+.img-scrolls img{
+width:50% ;
+}
+
+.slider img{
+width: 100%;
+padding: 0 20px;
+height: 500px;
+}
+.slider div{
+  width: 100%;
+}
+
+/* Feature */
+
+.FEATURE-grid{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.item img{
+  width: 100%;
+}
+
+.item{
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px 4px #ccc;
+
+  
+}
+
+.item-row{
+  margin-bottom: 20px;
+}
+.contact{
+  background-color: #121212;
+  padding: 100px ;
+
+}
+.contact-form li ,.contact-text p,.contact-form label,.contact h2{
+  color: white;
+}
+.contact-flex{
+  display: flex;
+justify-content: center;
+}
+.contact-form{
+  max-width: 40%;
+}
+.contact-text{
+  max-width: 50%;
+  padding-right:100px ;
+
+}
+.form-name{
+  display: flex;
+  flex-direction: column;
+}
+.form-mail{
+  display: flex;
+  flex-direction: column;
+}
+.form-message{
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input,textarea {
+  max-width: 100%;
+}
+.form-button{
+  margin-top: 20px;
+}
+
+/* pick-up img */
+
+@media(min-width:1300px){
+  .slider img{
+    height: 700px;
+  }
+}
+
+
+
+
+@media(max-width:900px){
+  .pick-up{
+    padding:0 ;
+  }
+  .slider img{
+    height: 200px;
+  
+  }
+  .item-row{
+    margin: 0;
+  }
+  .item{
+    margin-bottom: 30px;
+  }
+  .contact{
+    padding: 100px 20px;
+  }
+  .contact-text{
+    padding-right: 20px;
+  }
+}
